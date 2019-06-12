@@ -3,7 +3,7 @@
 ## Summary 
 This is the Webhooks section of our documentation.
 
-### API Push Calls
+## API Push Calls
 1. Checkouts 
     1. `/checkouts/created` - Sent via webhook subscription when cart is created
     2. `/checkouts/completed` - Sent via webhook subscription when cart is closed
@@ -15,7 +15,7 @@ This is the Webhooks section of our documentation.
 2. App
     1. `app/uninstalled` - Sent via webhook subscription when a merchant uninstalls the app
 
-<br><br>
+<br>
 
 #### PUSH `/checkouts/created`
 Upon the creation of a shopper’s checkout for a specific merchant, push the checkout data to all apps
@@ -65,7 +65,7 @@ This event will fire as soon as a shopper adds a product to their “cart” fro
 }
 ```
 
-<br><br>
+<br>
 
 
 #### PUSH `/checkouts/updated`
@@ -164,7 +164,7 @@ Sent via webhook subscription when cart is updated by:
 }
 ```
 
-<br><br>
+<br>
 
 
 #### PUSH `/checkouts/completed`
@@ -265,7 +265,7 @@ Close the order and send a `/checkouts/completed` webhook notification when:
 ```
 
 
-<br><br>
+<br>
 
 
 #### PUSH `/app/uninstalled`
