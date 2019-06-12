@@ -33,10 +33,8 @@ CartHook uses [OAuth 2.0's authorization code](https://tools.ietf.org/html/rfc67
 | **scope** | The scopes you need granted privileges to. You can find all available scopes a bit lower in these docs. Please note that scopes must be separated with spaces(or %20 if you want to URL encode the scopes). |
 
 ###### Full URL Example
-- https://admin.dev.carthook.com/settings/apps/install?client_id=<YOUR_CLIENT_ID>&redirect_uri=<YOUR_CALLBACK_URL>&response_type=code&
-         scope=<DESIRED_SCOPES>  
-    - Example: https://admin.dev.carthook.com/settings/apps/install?client_id=53ce1831deacc3766d37db12713a4bbf&redirect_uri=https://acme.com/callback&response_type=code&
-scope=read_assets write_assets
+- https://admin.dev.carthook.com/settings/apps/install?client_id=<YOUR_CLIENT_ID>&redirect_uri=<YOUR_CALLBACK_URL>&response_type=code&scope=<DESIRED_SCOPES>  
+    - Example: https://admin.dev.carthook.com/settings/apps/install?client_id=53ce1831deacc3766d37db12713a4bbf&redirect_uri=https://acme.com/callback&response_type=code&scope=read_assets write_assets
 
 ## API SCOPES
 Authenticated access scopes control access to resources in the REST Admin API. Authenticated access is intended for interacting with a store on behalf of the merchant to perform actions such as creating/managing assets or webhooks.
