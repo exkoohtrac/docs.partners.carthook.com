@@ -1,11 +1,10 @@
 # API Calls
 
 ## Summary 
-CartHook exposes a public `CH` window variable, with an `.event()` callback function. You can use that `.event()`  callback function to subscribe to specific page events. This is used to track specific user events, but NOT purchase events.
+CartHook exposes a public `CH` window variable, with an `.event()` callback function. You can use that `.event()`  callback function to subscribe to specific page events. This is used to track specific user events, but NOT purchase events. 
 
-<br>
 
-#### Basic Event structure
+## Basic Event structure
 
 ```
 CH.event(callbackSuccess, callbackError);
@@ -25,16 +24,16 @@ The available **EVENT**(s) are based on the page type and are as followed:
 
 <br>
 
-### Checkout page events:
+## Checkout page events:
 - `INITIATED_PAGE`
 - `INPUT_EMAIL` 
 - `FETCHED_SHIPPING`
 - `FETCHED_TAXES` 
 - `FETCHED_COUPON_CODE` 
 
-<br> <br>
+<br>
 
-#### Page initiated event
+### Page initiated event
 Event: `INITIATED_PAGE`
 ```
 {
@@ -66,9 +65,9 @@ Event: `INITIATED_PAGE`
 }
 ```
 
-<br> <br>
+<br>
 
-#### Input email event
+### Input email event
 Event: `INPUT_EMAIL`
 ```
 {
@@ -101,9 +100,9 @@ Event: `INPUT_EMAIL`
 }
 ```
 
-<br> <br>
+<br>
 
-#### Fetched shipping event
+### Fetched shipping event
 Event: `FETCHED_SHIPPING`
 ```
 {
@@ -138,9 +137,9 @@ Event: `FETCHED_SHIPPING`
 }
 ```
 
-<br> <br>
+<br>
 
-#### Fetched taxes event
+### Fetched taxes event
 Event: `FETCHED_TAXES`
 ```
 {
@@ -178,9 +177,9 @@ Event: `FETCHED_TAXES`
 ```
 
 
-<br> <br>
+<br>
 
-#### Fetched coupon event
+### Fetched coupon event
 Event: `FETCHED_COUPON_CODE`
 ```
 {
@@ -250,12 +249,12 @@ Event: `FETCHED_COUPON_CODE`
 ```
 
 
-### OTO (One Time Offer) page events:
+## OTO (One Time Offer) page events:
 - `INITIATED_PAGE`
 
-<br> <br>
+<br>
 
-#### Page initiated event
+### Page initiated event
 Event: `INITIATED_PAGE`
 ```
 {
@@ -360,9 +359,9 @@ Event: `INITIATED_PAGE`
 }
 ```
 
-<br> <br>
+<br>
 
-#### Page initiated event
+### Page initiated event
 Event: `INITIATED_PAGE`
 ```
 {
@@ -438,9 +437,9 @@ Event: `INITIATED_PAGE`
     }
   }
 ```
-<br><br>
+<br>
 
-### Example implementation
+## Example implementation
 ```
 CH.event(function(EVENT, data) {
     if (EVENT == 'INITATED_PAGE') {
