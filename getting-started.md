@@ -14,8 +14,7 @@ https://api.carthook.com/{version_number}/
 CartHook uses [OAuth 2.0's authorization code](https://tools.ietf.org/html/rfc6749#section-4.1) grant flow to issue access tokens on behalf of users. 
 
 1. The merchant makes a request to install the app from the Apps section within the CartHook admin or by redirecting a user to the admin Apps section from an external URL.
-    1. An external admin can redirect to our install page url by assembling the url of type:  https://admin.dev.carthook.com/settings/apps/install?client_id=<YOUR_CLIENT_ID>&redirect_uri=<YOUR_CALLBACK_URL>&response_type=code&
-       scope=<DESIRED_SCOPES>
+    1. **Note:** An external admin can redirect to our install page url
 2. The app redirects to CartHook's App Authorization page to load the OAuth grant screen and requests the required scopes.
 3. CartHook displays a prompt to receive Authorization and prompts the merchant to login if required.
 4. The merchant consents to the scopes and is redirected to the "**oAuth callback URL**" specified in the app details page of a single app. That will be set as the `redirect_uri` query param in the redirect URL. 
@@ -34,7 +33,9 @@ CartHook uses [OAuth 2.0's authorization code](https://tools.ietf.org/html/rfc67
 | **scope** | The scopes you need granted privileges to. You can find all available scopes a bit lower in these docs. Please note that scopes must be separated with spaces(or %20 if you want to URL encode the scopes). |
 
 ###### Full URL Example
-https://admin.dev.carthook.com/settings/apps/install?client_id=53ce1831deacc3766d37db12713a4bbf&redirect_uri=https://acme.com/callback&response_type=code&
+- https://admin.dev.carthook.com/settings/apps/install?client_id=<YOUR_CLIENT_ID>&redirect_uri=<YOUR_CALLBACK_URL>&response_type=code&
+         scope=<DESIRED_SCOPES>  
+    - Example: https://admin.dev.carthook.com/settings/apps/install?client_id=53ce1831deacc3766d37db12713a4bbf&redirect_uri=https://acme.com/callback&response_type=code&
 scope=read_assets write_assets
 
 ## API SCOPES
