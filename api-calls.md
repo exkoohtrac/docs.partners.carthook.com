@@ -34,7 +34,7 @@ This is the API Calls section of our documentation.
 #### Assets 
 | Name | Description|
 | ------------- |-------------|
-| **id**<br><br><sub><sup>READ-ONLY</sup></sub>    | `"id"`: `"cas_P12jn3Qzexr"`<br><br>base64 encoded prefixed id. Prefix is based on the : as_ |
+| **id**<br><br><sub><sup>READ-ONLY</sup></sub>    | `"id"`: `"cas_P12jn3Qzexr"`<br><br>base64 encoded prefixed id. Prefix is based on the : cas_ |
 | **created_at** <br><br><sub><sup>READ-ONLY</sup></sub>| `"created_at"`: `1558356696`<br><br>The date and time ([Unix Timestamp](https://www.unixtimestamp.com/)) when the asset was created.|
 | **updated_at** <br><br><sub><sup>READ-ONLY</sup></sub>| `"updated_at"`: `1558356696`<br><br>The date and time ([Unix Timestamp](https://www.unixtimestamp.com/)) when the asset was updated.|
 | **display** <br><br><sub><sup>REQUIRED</sup></sub> | `"display"`: `"checkout"`<br><br>The page this asset is displayed on. <br><br> Valid values are: <br><br> • `landing` <br><br> • `checkout` <br><br> • `oto` <br><br> • `upsell` <br><br> • `downsell` <br><br> • `thank_you` <br><br> • `all`  |
