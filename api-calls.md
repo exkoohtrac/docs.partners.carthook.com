@@ -3,7 +3,7 @@
 ## Summary 
 This is the API Calls section of our documentation.
 
-#### Merchant 
+## Merchant 
 | Name | Description|
 | ------------- |-------------|
 | **id**      | `"id"`: `"cmid_KixEkfTj"`<br><br>The associated merchant for the merchant that installed the app |
@@ -13,7 +13,7 @@ This is the API Calls section of our documentation.
 
 <br> 
 
-#### 1. GET /merchant 
+### 1. GET /merchant 
 **GET** `/merchant` - Get basic merchant data associated to the installed account
 
 ###### Response
@@ -29,9 +29,7 @@ This is the API Calls section of our documentation.
 }
 ```
 
-<br><br>
-
-#### Assets 
+## Assets 
 | Name | Description|
 | ------------- |-------------|
 | **id**<br><br><sub><sup>READ-ONLY</sup></sub>    | `"id"`: `"cas_P12jn3Qzexr"`<br><br>base64 encoded prefixed id. Prefix is based on the : cas_ |
@@ -48,7 +46,7 @@ This is the API Calls section of our documentation.
 
 <br> 
 
-#### Available resources
+### Available resources
 1. **GET** `/assets` - Get all global code assets
 2. **POST** `/assets` - Create global code asset
 3. **GET** `/assets/{asset_id}` - Get single global code asset by ID
@@ -57,7 +55,7 @@ This is the API Calls section of our documentation.
 
 <br> 
 
-#### 1. GET /assets 
+### 1. GET /assets 
 **GET** `/assets` - Get all global code assets
 
 ###### Response
@@ -150,7 +148,7 @@ This is the API Calls section of our documentation.
     ]
 }
 ```
-#### 2. POST /assets 
+### 2. POST /assets 
 **POST** `/assets` - Create a single code asset
 
 ###### Payload
@@ -166,7 +164,7 @@ This is the API Calls section of our documentation.
 
 <br>
 
-#### 3. PUT /assets/{asset_id}
+### 3. PUT /assets/{asset_id}
 **PUT** `/assets/{asset_id}` -  Update a single property of a specific asset by asset id
 
 ###### Payload
@@ -178,7 +176,7 @@ This is the API Calls section of our documentation.
 
 <br>
 
-#### 4. DELETE /assets/{asset_id}
+### 4. DELETE /assets/{asset_id}
 **DELETE** `/assets/{asset_id}` -  DELETE a single property of a specific asset by asset id
 
 ###### Payload
@@ -189,7 +187,7 @@ This is the API Calls section of our documentation.
 <br>
 
 
-#### Error examples
+### Error examples
 
 ##### Creating an asset without the required field produces errors:
 ``` 
@@ -204,10 +202,7 @@ This is the API Calls section of our documentation.
 ``` 
 
 
-<br><br><br>
-
-
-#### Webhooks 
+## Webhooks 
 | Name | Description|
 | ------------- |-------------|
 | **id**<br><br><sub><sup>READ-ONLY</sup></sub>    | `"id"`: `"cwe_P12jn3Qzexr"`<br><br>base64 encoded prefixed id. Prefix is based on the : cwe_ |
@@ -227,7 +222,7 @@ This is the API Calls section of our documentation.
 
 <br> 
 
-#### Available resources
+### Available resources
 1. **GET** `/webhooks` - Get all webhooks
 2. **POST** `/webhooks` - Create a webhook
 3. **GET** `/webhooks/{webhook_id}` - Get a single webhook by ID
@@ -236,7 +231,7 @@ This is the API Calls section of our documentation.
 
 <br> 
 
-#### 1. GET /webhooks 
+### 1. GET /webhooks 
 **GET** `/webhooks` - Get all webhooks
 
 ###### Response
@@ -289,7 +284,7 @@ This is the API Calls section of our documentation.
   }
 }
 ```
-#### 2. POST /webhooks 
+### 2. POST /webhooks 
 **POST** `/webhooks` - Creates a single webhook
 
 ###### Payload
@@ -308,7 +303,7 @@ This is the API Calls section of our documentation.
 
 <br>
 
-#### 3. PUT /webhooks/{webhook_id}
+### 3. PUT /webhooks/{webhook_id}
 **PUT** `/webhooks/{webhook_id}` -  Update a single property of a specific webhook by webhook id
 
 ###### Payload
@@ -329,7 +324,7 @@ This is the API Calls section of our documentation.
 
 <br>
 
-#### 4. DELETE /webhooks/{webhook_id}
+### 4. DELETE /webhooks/{webhook_id}
 **DELETE** `/webhooks/{webhook_id}` -  Deletes a single webhook by ID
 
 ###### Payload
