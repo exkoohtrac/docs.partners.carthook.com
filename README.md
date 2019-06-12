@@ -1,4 +1,4 @@
-# Partners API
+# CartHook's Partners API
 Welcome to our Partners API public documentation GitHub page. 
 
 ### Table of contents:
