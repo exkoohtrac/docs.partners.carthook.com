@@ -97,7 +97,7 @@ This is the API Calls section of our documentation.
 
 <br>
 
-**GET** `/assets?type=css` - Get all assets filtered by type 
+**GET** `/assets?filter[type]=css` - Get all assets filtered by type 
 
 ###### Response
 **HTTP/1.1 200 OK** 
