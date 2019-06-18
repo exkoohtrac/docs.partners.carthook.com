@@ -1,7 +1,12 @@
 # Getting Started 
 
 ## API Base URL 
+
+### Production
 - https://api.carthook.com/  
+
+### Sandbox
+- https://api.sandbox.carthook.com
 
 ## Versioning
 https://api.carthook.com/{version_number}/
