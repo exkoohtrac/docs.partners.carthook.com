@@ -210,14 +210,14 @@ This is the API Calls section of our documentation.
 | **updated_at** <br><br><sub><sup>READ-ONLY</sup></sub>| `"updated_at"`: `"1558356696"`<br><br>The date and time ([Unix Timestamp](https://www.unixtimestamp.com/)) when the webhook was updated.|
 | **url** <br><br><sub><sup>REQUIRED</sup></sub>| `"url"`: `"https://carthook.com/webhook_catch"`<br><br>URL to where the Webhook should send the POST request when the event occurs. |
 | **format** <br><br><sub><sup>OPTIONAL</sup></sub> | `"format"`: `"json"`<br><br> Default value: `json` <br><br> Valid values are: <br><br> • `json`  |
-| **topic** <br><br><sub><sup>REQUIRED</sup></sub> | `"topic"`: `"checkout/created"` <br><br> Event that triggers the Webhook. <br><br> Valid values are: <br><br> • `checkout/created`,`checkout/updated`,`checkout/delete` <br><br> • `app/uninstalled` |
+| **topic** <br><br><sub><sup>REQUIRED</sup></sub> | `"topic"`: `"checkouts/created"` <br><br> Event that triggers the Webhook. <br><br> Valid values are: <br><br> • `checkout/created`,`checkout/updated`,`checkout/delete` <br><br> • `app/uninstalled` |
 
 <br>
 
 ##### Events and topics
 | Event | Topic|
 | ------------- |-------------|
-| **Checkout**    | `checkout/created`,`checkout/updated`,`checkout/delete` |
+| **Checkout**    | `checkouts/created`,`checkouts/updated`,`checkouts/deleted` |
 | **App**    | `app/uninstalled` |
 
 <br> 
@@ -244,16 +244,16 @@ This is the API Calls section of our documentation.
          "created_at":1558356696,
          "updated_at":1558356696,
          "url":"https://carthook.com/checkout_create",
-         "format":"json",
-         "topic":"checkout/created"
+         "format":"application/json",
+         "topic":"checkouts/created"
       },
       {
          "id":"cwe_P12jn3Qzexr",
          "created_at":1558356696,
          "updated_at":1558356696,
          "url":"https://carthook.com/checkout_update",
-         "format":"json",
-         "topic":"checkout/updated"
+         "format":"application/json",
+         "topic":"checkouts/updated"
       }
    ],
    "meta":{
@@ -279,8 +279,8 @@ This is the API Calls section of our documentation.
     "created_at": 1558356696,
     "updated_at": 1558356696,
     "address": "https://carthook.com/checkout_created",
-    "format": "json",
-    "topic": "checkout/created"
+    "format": "application/json",
+    "topic": "checkouts/created"
   }
 }
 ```
@@ -290,9 +290,9 @@ This is the API Calls section of our documentation.
 ###### Payload
 ``` 
 {
-  "topic": "checkout/created",
+  "topic": "checkouts/created",
   "url": "https://carthook.com/checkout_created",
-  "format": "json"
+  "format": "application/json"
 }
 ``` 
 
@@ -309,9 +309,9 @@ This is the API Calls section of our documentation.
 ###### Payload
 ``` 
 {
-  "topic": "checkout/created",
+  "topic": "checkouts/created",
   "url": "https://carthook.com/checkout_created",
-  "format": "json"
+  "format": "application/json"
 }
 ``` 
 
