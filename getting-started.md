@@ -8,8 +8,10 @@
 #### Sandbox
 - https://api.sandbox.carthook.com
 
-## Versioning
+## Versioning 
 https://api.carthook.com/{version_number}/
+
+<sub><sup>_**Note**: Does not apply to the /oauth/token resource below._</sub></sup>
 
 #### Active version:
 - `v1` -> https://api.carthook.com/v1/
@@ -55,7 +57,9 @@ Authenticated access scopes control access to resources in the REST Admin API. A
 Requesting access token
 When the merchants get redirected to your redirect_uri a code parameter will be present in the URL. You can use that code to request the permanent access token.
 
-**POST** `/oauth/token`
+**POST** `/oauth/token`  
+<sup> **Note:** The oauth token is not versioned and is appended directly to the root of the URL. All calls to our api except the oauth resource are versioned (e.g. api.carthook.com/oauth/token). </sup> 
+
 ###### Payload
 ```
 {
