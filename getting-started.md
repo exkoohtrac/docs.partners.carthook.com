@@ -85,5 +85,7 @@ When the merchants get redirected to your redirect_uri a code parameter will be 
 ## API call Authentication
  
  The app can make requests by sending the OAuth token as a header parameter.  
- Authorization: `Bearer {access_token}` where `{access_token}` is replaced by the app developer with the permanent token.
+ Authorization: `Bearer {access_token}` where `{access_token}` is replaced by the app developer with the permanent token. 
+ 
+ Please make sure that you have a header of `Content-type: application/json` appended to your calls.
 
