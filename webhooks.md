@@ -30,6 +30,8 @@ This event will fire as soon as a shopper adds a product to their “cart” fro
   "id": "cev_P12jn3Qzexr",
   "webhook_id": "cwe_Sai45cWed",
   "cid": "cid_xxxxxx",
+  "merchant_id": "cmid_PxVEpmJar8xr9Qe86ZvD",
+  "store_url": "store.myshopify.com",
   "funnel_id": "cfu_Sa9473Cf21",
   "currency": "USD",
   "subtotal_price": 247.5,
@@ -80,6 +82,8 @@ Sent via webhook subscription when cart is updated by:
   "id": "cev_P12jn3Qzexr",
   "webhook_id": "cwe_Sai45cWed",
   "cid": "cid_xxxxxx",
+  "merchant_id": "cmid_PxVEpmJar8xr9Qe86ZvD",
+  "store_url": "store.myshopify.com",
   "funnel_id": "cfu_Sa9473Cf21",
   "currency": "USD",
   "subtotal_price": 247.5,
@@ -177,6 +181,8 @@ Close the order and send a `/checkouts/completed` webhook notification when:
   "id": "cev_P12jn3Qzexr",
   "webhook_id": "cwe_Sai45cWed"
   "cid": "cid_xxxxxx",
+  "merchant_id": "cmid_PxVEpmJar8xr9Qe86ZvD",
+  "store_url": "store.myshopify.com",
   "funnel_id": "cfu_Sa9473Cf21",
   "customer": {
     "email": "customer+email@carthook.com",
