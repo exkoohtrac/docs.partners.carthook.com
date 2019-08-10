@@ -23,7 +23,7 @@ Upon the creation of a shopper’s checkout for a specific merchant, push the ch
 1. that have been installed by the merchant and 
 2. that have webhooks subscribing to /checkouts/created
 
-This event will fire as soon as a shopper adds a product to their “cart” from either the landing page or checkout page of a CartHook funnel.
+This event will fire as soon as a shopper fills in some basic information on the checkout page. The minimum is an email address. 
 
 ```
 {
