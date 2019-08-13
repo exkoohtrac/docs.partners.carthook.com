@@ -88,4 +88,29 @@ When the merchants get redirected to your redirect_uri a code parameter will be 
  Authorization: `Bearer {access_token}` where `{access_token}` is replaced by the app developer with the permanent token. 
  
  Please make sure that you have a header of `Content-type: application/json` appended to your calls.
+ 
+## Webhook HMAC Authentication
+
+Webhooks created through the API by a CartHook App are verified by calculating a digital signature. Each webhook request includes a base64-encoded `X-Carthook-Hmac-Sha256` header, which is generated using the app’s shared secret along with the data sent in the request.
+
+#### PHP Example: 
+```
+<?php
+
+define('CARTHOOK_APP_SECRET', 'my_shared_secret');
+
+function verify_webhook($data, $hmac_header)
+{
+  $calculated_hmac = base64_encode(hash_hmac('sha256', $data, CARTHOOK_APP_SECRET, true));
+  return hash_equals($hmac_header, $calculated_hmac);
+}
+
+
+$hmac_header = $_SERVER['X-Carthook-Hmac-Sha256'];
+$data = file_get_contents('php://input');
+$verified = verify_webhook($data, $hmac_header);
+error_log('Webhook verified: '.var_export($verified, true)); //check error.log to see the result
+
+?>
+```
 
