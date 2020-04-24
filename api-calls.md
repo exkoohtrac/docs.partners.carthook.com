@@ -149,7 +149,7 @@ This is the API Calls section of our documentation.
 }
 ```
 ### 2. POST /assets 
-**POST** `/assets` - Create a single code asset
+**POST** `/assets` - Create a single asset
 
 ###### Payload
 ``` 
@@ -165,7 +165,7 @@ This is the API Calls section of our documentation.
 <br>
 
 ### 3. PUT /assets/{asset_id}
-**PUT** `/assets/{asset_id}` -  Update a single property of a specific asset by asset id
+**PUT** `/assets/{asset_id}` -  Update a single property of a specific asset by ID
 
 ###### Payload
 ``` 
@@ -177,7 +177,7 @@ This is the API Calls section of our documentation.
 <br>
 
 ### 4. DELETE /assets/{asset_id}
-**DELETE** `/assets/{asset_id}` -  DELETE a single property of a specific asset by asset id
+**DELETE** `/assets/{asset_id}` -  Delete a specific asset by ID
 
 ###### Payload
 ``` 
