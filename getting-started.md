@@ -54,8 +54,8 @@ Authenticated access scopes control access to resources in the REST Admin API. A
     - Access to the Assets endpoints
 
 ## Requesting the permanent access token
-Requesting access token
-When the merchants get redirected to your redirect_uri a code parameter will be present in the URL. You can use that code to request the permanent access token.
+
+When the merchants get redirected to your redirect_uri, a `code` parameter will be present in the URL. You can use that code to request the permanent access token.
 
 **POST** `/oauth/token`  
 <sup> **Note:** The oauth token is not versioned and is appended directly to the root of the URL. All calls to our api except the oauth resource are versioned (e.g. api.carthook.com/oauth/token). </sup> 
@@ -84,10 +84,10 @@ When the merchants get redirected to your redirect_uri a code parameter will be 
 
 ## API call Authentication
  
- The app can make requests by sending the OAuth token as a header parameter.  
- Authorization: `Bearer {access_token}` where `{access_token}` is replaced by the app developer with the permanent token. 
+ The app can make requests by sending the OAuth token as a header parameter.
+ `Authorization: Bearer {access_token}` where `{access_token}` is replaced by the app developer with the permanent token.
  
- Please make sure that you have a header of `Content-type: application/json` appended to your calls.
+ Please make sure that you have a header of `Content-Type: application/json` appended to your calls.
  
 ## Webhook HMAC Authentication
 
