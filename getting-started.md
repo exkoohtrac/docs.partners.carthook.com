@@ -6,7 +6,7 @@
 - https://api.carthook.com/  
 
 #### Sandbox
-- https://api.sandbox.carthook.com
+- https://api.sandbox.carthook.com/
 
 ## Versioning 
 https://api.carthook.com/{version_number}/
@@ -27,7 +27,7 @@ CartHook uses [OAuth 2.0's authorization code](https://tools.ietf.org/html/rfc67
 4. The merchant consents to the scopes and is redirected to the "**oAuth callback URL**" specified in the app details page of a single app. That will be set as the `redirect_uri` query param in the redirect URL. 
 5. The app makes an access token request to CartHook including the `client_id`, `client_secret`, and `code`.
 6. CartHook returns the access token and requested scopes.
-7. The app uses the **Permanent Acess Token** to make requests to the CartHook API.
+7. The app uses the **Permanent Access Token** to make requests to the CartHook API.
 8. CartHook returns the requested data.
 
 <br>
