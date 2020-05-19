@@ -80,6 +80,32 @@ When the merchants get redirected to your redirect_uri, a `code` parameter will 
 }
 ````
 
+## Refreshing the access token
+
+When the merchant wants to retrieve a new access token, there's an option to do so even if the access token is still valid. However, the merchant must have a valid refresh token that was returned during the OAuth handshake process in order to request a new access token.
+
+**POST** `/oauth/token`
+<sup> **Note:** The oauth token is not versioned and is appended directly to the root of the URL. All calls to our api except the oauth resource are versioned (e.g. api.carthook.com/oauth/token). </sup> 
+
+###### Payload
+```
+{
+    "grant_type": "refresh_token",
+    "refresh_token": "your-refresh-token"
+    "client_id": "53ce1831deacc3766d37db12713a4bbf",
+    "client_secret": "cmnIaqJ7i8NcROeh4EkuHO9izxjC4ICQ28Zo8vvR",
+    "scope": ""
+}
+```
+###### Example Response
+````
+{
+    "expires_in": 631152000,
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQ2YWQzMjYzNDlhMDlkMzU2NmEyNWFkZWIxNzA4MzczNGIyNjQyNmM5YzZkNWI0MWRjMWZiOTZhMWViNDk2MTYyMWUwODQ2ZWU5NWZlNzhiIn0.eyJhdWQiOiI4MjlmMDk1MDM2NTliOTVkMGI3ZTQ3MDg0ODVkMGYyNyIsImp0aSI6IjQ2YWQzMjYzNDlhMDlkMzU2NmEyNWFkZWIxNzA4MzczNGIyNjQyNmM5YzZkNWI0MWRjMWZiOTZhMWViNDk2MTYyMWUwODQ2ZWU5NWZlNzhiIiwiaWF0IjoxNTYwMzQwOTg2LCJuYmYiOjE1NjAzNDA5ODYsImV4cCI6MjE5MTQ5Mjk4Niwic3ViIjoibWlkX1VMbEdSdXNWIiwic2NvcGVzIjpbIndyaXRlX3dlYmhvb2tzIiwicmVhZF93ZWJob29rcyIsIndyaXRlX2Fzc2V0cyIsInJlYWRfYXNzZXRzIl19.EZS47EbmX9NvIq9f2AR-gC5bsdtLObHy6tHBoSRSmO-V8lxXwL97zfI_VU9S0Ui-OjNtAfu95T0rkHiTdPLrMT4-657tMpcLhjGzPwIUF80BXUF6lNaPlYi9ne5XJvUEW8jAdDfrVe2b1_osFCvzPARw0DypZofpSH0wds2TsYqDoVcuNcTFq3QHFweiojNJgWeF8rc73ye_ql-O7d1EHfGDjyWPhtj1XZKUEAtLEZzG17b-SO7ocLUagMnLLh1D_v9wcf9oE5lZ4luQohahJARBceUTWexYLxSLhyO08EnNdD5O5GSbBy05Kc4ZZJgVLRQaDSqCZmu75OLlvx_u23xrTy4bb4krL2WazbnE2CypYgJ_XUou7TgKQIvDkLiIKAH5Iv21xvc7-Yey9rZKDjZrLunfuoqGEaQaC-rhhEUSHLuXH0UnEVjEgSYPoviO81OYuoFxGPFnzLZ7eV6dJb85HtQQUSmXix0kqakjPmFubTLGZlRuATCHHxE9Af33auk4610ZXmDL5yk_Vx5aZu8Zkk3m2NgOLJu2-fcILmkK3-6jXq0gaFTTlttAhqs-u6XfCPdHlAq6bJzWaY8pY5AvNfAUftcIV6TxCNvQ-rahHgrz-YUWmxUb3dnbkstnC7OqCZTgcOlPFIQOI0S1fPzbROcrb0gVf2itresGjLE",
+    "refresh_token": "def502003ee3d818bdb864ecdf46806a5618491215815621b0fb0ee96a33b01a9466d7fb191dbc134d411ab43b8f5ca732f13025ecaf22256a674df3da1456180025180936f6e6b82f75e88ae8937093dc36cd067e714a74489aba1f45fd3c02545cbf0fa9c1d7ef4d67f761ac0598684c2c0752dd555abe69c8eab42ae7743c3dc1cbb87b4783507dcd2d02a43bc00558b7c7b4171fd6e388f53067b2a2852a6e777660a9ae2e51f590f5b225943b0b0615e17b44c3cf4444da8f78c7964b59b464dc3bd1855e551b2839ac80245299d3bb9d23ecfb5e6b85cd3e335273ed8747e048ec9d1b73b5de5c00289911a3f3f5f6be3e255819934d9a422254ba5d93876c030ab5e2fc56c1f47396eb0b06abef6b1dfa8e9b19e1534fd769cf08dfef565d1bdf748592362c8ecd4dff333a92ab6fe7f61a0552c0029eedcacf4ea7003ffdadcefd29d067181bfde776fc078b68d8b86f02383f20d47b889cdf38e9e31f7825b1bc29fb66afac7aa2f24d3efa64efd2b7135faa76100895ef128a679b84c99b6d3231ef0e8f7601d43efafcab66307681e314194d8c826ddbade38a27b60ebb4b4eea8dd4cb1a702ad0b17bef06ceb6288ad1180ae6ec041d6ea55f418d7517cc3246e34a0e81"
+}
+````
+
 <br>
 
 ## API call Authentication
